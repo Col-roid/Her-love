@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Darling</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Georgia', serif;
+        background: #0b0000;
+        color: #f5dcdc;
+        overflow-x: hidden;
+    }
+
+    /* Background glow */
+    body::before {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at center, #2b0000 0%, #0b0000 70%);
+        z-index: -1;
+    }
+
+    header {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(to bottom, #1a0000, #0b0000);
+        border-bottom: 1px solid #500000;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        color: #ff4d4d;
+        letter-spacing: 2px;
+    }
+
+    header p {
+        color: #c9a3a3;
+        font-style: italic;
+    }
+
+    section {
+        max-width: 900px;
+        margin: auto;
+        padding: 50px 20px;
+        border-bottom: 1px solid #2a0000;
+    }
+
+    h2 {
+        color: #ff1a1a;
+        margin-bottom: 15px;
+        border-left: 4px solid #8b0000;
+        padding-left: 10px;
+    }
+
+    .card {
+        background: #140000;
+        padding: 25px;
+        border-radius: 12px;
+        border: 1px solid #3a0000;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.08);
+        margin-top: 20px;
+        transition: 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
+    }
+
+    .quote {
+        font-style: italic;
+        color: #ff8080;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        color: #7a4b4b;
+        font-size: 0.9rem;
+    }
+
+    .heart {
+        color: #ff0000;
+        animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+        0% {opacity: 0.6;}
+        50% {opacity: 1;}
+        100% {opacity: 0.6;}
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>For You, My Darling</h1>
+    <p>A quiet place made only for you.</p>
+</header>
+
+<section>
+    <h2>About You</h2>
+    <div class="card">
+        <p>
+        This space is dedicated to the person who changed my days without even trying.
+        Not loudly. Not suddenly. But slowly, deeply, and in ways I didn’t expect.
+        </p>
+        <p>
+        You are not just someone I talk to.  
+        You are someone I think about even in silence.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>My Words For You</h2>
+    <div class="card">
+        <p class="quote">
+        "If I were reborn a thousand times, in every timeline, in every version of life,
+        I would still choose you without hesitation."
+        </p>
+    </div>
+
+    <div class="card">
+        <p>
+        I am not perfect.  
+        I get overwhelmed. I get anxious. I overthink.  
+        But one thing that stays consistent is this:
+        I care about you sincerely.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Memories & Moments</h2>
+    <div class="card">
+        <p>
+        The late night talks.  
+        The voice messages.  
+        The small “I love you” that somehow means more than long paragraphs.  
+        </p>
+        <p>
+        Even the misunderstandings we faced…  
+        they didn’t make me walk away.  
+        They made me reflect more.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>My Promise</h2>
+    <div class="card">
+        <p>
+        I won’t disappear when things get heavy.  
+        I won’t escape into silence instead of communicating.  
+        And I won’t make you feel ignored again as much as possible.
+        </p>
+        <p>
+        Not just words.  
+        Actions. Consistency. Effort.
+        </p>
+    </div>
+</section>
+
+<section>
+    <h2>Final Note</h2>
+    <div class="card">
+        <p class="quote">
+        You are not just a chapter.  
+        You are a presence that stayed even on my worst days.
+        </p>
+        <p>
+        This website isn’t loud.  
+        It’s not for the world.  
+        It’s just a quiet portfolio of how much you mean to me.
+        </p>
+        <p class="heart">♥ Always yours.</p>
+    </div>
+</section>
+
+<footer>
+    Made with sincerity, not perfection.
+</footer>
+
+</body>
+</html>
