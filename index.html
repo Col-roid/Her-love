@@ -6,187 +6,209 @@
 <title>For My Darling</title>
 
 <style>
-    body {
-        margin: 0;
-        font-family: 'Georgia', serif;
-        background: #0b0000;
-        color: #f5dcdc;
-        overflow-x: hidden;
-    }
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #fff0f3, #ffe6ea, #2b0000);
+    color: #3a0000;
+}
 
-    /* Background glow */
-    body::before {
-        content: "";
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at center, #2b0000 0%, #0b0000 70%);
-        z-index: -1;
-    }
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 240, 245, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ffb3c1;
+    z-index: 1000;
+}
 
-    header {
-        text-align: center;
-        padding: 60px 20px;
-        background: linear-gradient(to bottom, #1a0000, #0b0000);
-        border-bottom: 1px solid #500000;
-    }
+nav button {
+    background: #8b0000;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-    header h1 {
-        font-size: 2.5rem;
-        color: #ff4d4d;
-        letter-spacing: 2px;
-    }
+nav button:hover {
+    background: #b3002d;
+}
 
-    header p {
-        color: #c9a3a3;
-        font-style: italic;
-    }
+.section {
+    display: none;
+    padding: 100px 20px 60px;
+    max-width: 900px;
+    margin: auto;
+}
 
-    section {
-        max-width: 900px;
-        margin: auto;
-        padding: 50px 20px;
-        border-bottom: 1px solid #2a0000;
-    }
+.active {
+    display: block;
+}
 
-    h2 {
-        color: #ff1a1a;
-        margin-bottom: 15px;
-        border-left: 4px solid #8b0000;
-        padding-left: 10px;
-    }
+h1 {
+    color: #8b0000;
+    text-align: center;
+}
 
-    .card {
-        background: #140000;
-        padding: 25px;
-        border-radius: 12px;
-        border: 1px solid #3a0000;
-        box-shadow: 0 0 20px rgba(255, 0, 0, 0.08);
-        margin-top: 20px;
-        transition: 0.3s ease;
-    }
+.card {
+    background: rgba(255,255,255,0.85);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(139,0,0,0.1);
+    margin-top: 20px;
+}
 
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 25px rgba(255, 0, 0, 0.2);
-    }
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin: 10px;
+    border: 3px solid #ffccd5;
+}
 
-    .quote {
-        font-style: italic;
-        color: #ff8080;
-        font-size: 1.1rem;
-    }
+.quote {
+    font-style: italic;
+    color: #7a0019;
+}
 
-    footer {
-        text-align: center;
-        padding: 30px;
-        color: #7a4b4b;
-        font-size: 0.9rem;
-    }
-
-    .heart {
-        color: #ff0000;
-        animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-        0% {opacity: 0.6;}
-        50% {opacity: 1;}
-        100% {opacity: 0.6;}
-    }
+.music {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- MUSIC (Your Guardian Angel) -->
+<div class="music">
+<iframe width="0" height="0" 
+src="https://www.youtube.com/embed/UFu7yghK9GQ?autoplay=1&loop=1&playlist=UFu7yghK9GQ">
+</iframe>
+</div>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('profile')">Profile</button>
+    <button onclick="showSection('favorites')">Favorites</button>
+    <button onclick="showSection('promises')">Promises</button>
+    <button onclick="showSection('gallery')">Gallery</button>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section active">
     <h1>For You, My Darling</h1>
-    <p>A quiet place made only for you.</p>
-</header>
-
-<section>
-    <h2>About You</h2>
-    <div class="card">
-        <p>
-        This space is dedicated to the person who changed my days without even trying.
-        Not loudly. Not suddenly. But slowly, deeply, and in ways I didn’t expect.
-        </p>
-        <p>
-        You are not just someone I talk to.  
-        You are someone I think about even in silence.
-        </p>
-    </div>
-</section>
-
-<section>
-    <h2>My Words For You</h2>
     <div class="card">
         <p class="quote">
-        "If I were reborn a thousand times, in every timeline, in every version of life,
-        I would still choose you without hesitation."
+        A soft space made only for you. Not loud. Not public. Just sincere.
+        </p>
+        <p>
+        You always act strong. You carry things quietly.  
+        People see the calm version of you, but they don’t see the silent battles you fight alone.
+        </p>
+        <p>
+        You’re the type who doesn’t want to be a burden, so you keep everything inside.  
+        And even when you cry in silence, you still get up and keep going.
+        </p>
+        <p>
+        This is not a loud love.  
+        This is the quiet kind — the one that stays, reassures, and chooses you even on your lowest days.
         </p>
     </div>
+</div>
 
+<!-- PROFILE -->
+<div id="profile" class="section">
+    <h1>Her Profile</h1>
     <div class="card">
-        <p>
-        I am not perfect.  
-        I get overwhelmed. I get anxious. I overthink.  
-        But one thing that stays consistent is this:
-        I care about you sincerely.
-        </p>
+        <p><b>Name:</b> Seya / Nellie</p>
+        <p><b>Birthday:</b> October 29</p>
+        <p><b>Zodiac:</b> Scorpio</p>
+        <p><b>Strand:</b> HUMSS</p>
+        <p><b>Dream:</b> Future Lawyer</p>
+        <p><b>Style:</b> Formal, Aesthetic, Elegant</p>
+        <p><b>Personality:</b> Strong outside, soft-hearted inside</p>
+        <p><b>Traits:</b> Analytical, thoughtful, quiet strength, deep thinker</p>
+        <p><b>Love Language:</b> All (depends on mood)</p>
+        <p><b>Note:</b> Avoidant when stressed but still polite and caring</p>
     </div>
-</section>
 
-<section>
-    <h2>Memories & Moments</h2>
-    <div class="card">
-        <p>
-        The late night talks.  
-        The voice messages.  
-        The small “I love you” that somehow means more than long paragraphs.  
-        </p>
-        <p>
-        Even the misunderstandings we faced…  
-        they didn’t make me walk away.  
-        They made me reflect more.
-        </p>
-    </div>
-</section>
-
-<section>
-    <h2>My Promise</h2>
-    <div class="card">
-        <p>
-        I won’t disappear when things get heavy.  
-        I won’t escape into silence instead of communicating.  
-        And I won’t make you feel ignored again as much as possible.
-        </p>
-        <p>
-        Not just words.  
-        Actions. Consistency. Effort.
-        </p>
-    </div>
-</section>
-
-<section>
-    <h2>Final Note</h2>
     <div class="card">
         <p class="quote">
-        You are not just a chapter.  
-        You are a presence that stayed even on my worst days.
+        “She doesn’t beg to be kept.  
+        She distances when she feels unwanted.”
         </p>
-        <p>
-        This website isn’t loud.  
-        It’s not for the world.  
-        It’s just a quiet portfolio of how much you mean to me.
-        </p>
-        <p class="heart">♥ Always yours.</p>
     </div>
-</section>
+</div>
 
-<footer>
-    Made with sincerity, not perfection.
-</footer>
+<!-- FAVORITES -->
+<div id="favorites" class="section">
+    <h1>Her Favorites</h1>
+    <div class="card">
+        <p><b>Favorite Foods:</b> Chicken fillet, fries, nuggets, buttered shrimp, burger steak</p>
+        <p><b>Drinks:</b> Chuckie, Mogu-mogu, Cali</p>
+        <p><b>Coffee:</b> Kopiko Blanca, Caramel Macchiato, Java Chip, Oreo Frappe</p>
+        <p><b>Color:</b> Dark Red</p>
+        <p><b>Likes:</b> Books, classical music, dark romance stories, thinking-heavy content</p>
+        <p><b>Comfort:</b> Food, quiet moments, being understood without explaining too much</p>
+    </div>
+</div>
+
+<!-- PROMISES -->
+<div id="promises" class="section">
+    <h1>My Promises</h1>
+    <div class="card">
+        <p>• I will communicate my feelings clearly.</p>
+        <p>• I will tell you beforehand when I need time.</p>
+        <p>• I will not make you feel less prioritized again.</p>
+        <p>• I will take care of myself while still caring for you.</p>
+        <p>• I will improve my actions, not just my words.</p>
+        <p>• I will choose reassurance over silence.</p>
+    </div>
+
+    <div class="card">
+        <p class="quote">
+        You deserve a love that stays, reassures, and never makes you question your place.
+        Not the bare minimum. Not inconsistency. But quiet effort.
+        </p>
+    </div>
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="section">
+    <h1>Gallery (Your Memories)</h1>
+    <div class="card gallery">
+        <!-- REPLACE THESE WITH HER PICTURES -->
+        <img src="herpfp.jpg" alt="Her Picture">
+        <img src="fries.jpg" alt="Fries">
+        <img src="memory1.jpg" alt="Memory">
+    </div>
+    <div class="card">
+        <p>
+        This section is where I keep the visuals that remind me of you.  
+        Small things. Random things. Comfort things.  
+        Because even the simplest details matter when it comes to you.
+        </p>
+    </div>
+</div>
+
+<script>
+function showSection(id) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+}
+</script>
 
 </body>
 </html>
